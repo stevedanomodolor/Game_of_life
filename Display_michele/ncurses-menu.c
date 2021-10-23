@@ -11,7 +11,7 @@ typedef struct {
 } element_t;
 
 // Create a new list, with one element newly created with "name"
-void matrix_new1(int **a) {
+// void matrix_new1(int **a) {
   // define the size of the matrix
   int m = 5;
   int n = 5;
@@ -61,7 +61,7 @@ void matrix_new1(int **a) {
 	free(a);
 }
 
-void matrix_new2(int **a) {
+// void matrix_new2(int **a) {
   // define the size of the matrix
   int m = 5;
   int n = 10;
@@ -111,7 +111,7 @@ void matrix_new2(int **a) {
 	free(a);
 }
 
-void matrix_new3(int **a) {
+// void matrix_new3(int **a) {
   // define the size of the matrix
   int m = 5;
   int n = 9;
@@ -162,17 +162,16 @@ void matrix_new3(int **a) {
 }
 
 /* Calculates the length of a "string" */
-int
-n_chars (char *str)
-{
-    int i = 0;
-
-    while (1)                       /* Loops until the ith element */
-    {                               /* is a string terminator.     */
-        if (*(str + i++) == '\0')   /* i increases even if the     */
-            return --i;             /* element is '\0', so i is    */
-    }                               /* decreased by one.           */
-}
+// int strlen (char *str)
+// {
+//     int i = 0;
+//
+//     while (1)                       /* Loops until the ith element */
+//     {                               /* is a string terminator.     */
+//         if (*(str + i++) == '\0')   /* i increases even if the     */
+//             return --i;             /* element is '\0', so i is    */
+//     }                               /* decreased by one.           */
+// }
 
 /* Copies string "src" to string "dest" */
 void
@@ -220,13 +219,13 @@ print_menu (int sty, int x, int alts, int width,
     int i, j, k, blankspace1, blankspace2, currow = start, y = sty, key;
     char temparray[100];
 
-    if (n_chars (title) + 2 > width)    /* "width" cannot be less than */
-        width = n_chars (title) + 2;    /* the width of the strings    */
+    if (strlen (title) + 2 > width)    /* "width" cannot be less than */
+        width = strlen (title) + 2;    /* the width of the strings    */
                                         /* plus some space. First      */
     for (k = 0; k < alts; k++)          /* check the title, then the   */
     {                                   /* entries.                    */
-        if (n_chars (&entries[k][0]) + 2 > width)
-            width = n_chars (&entries[k][0]) + 2;
+        if (strlen (&entries[k][0]) + 2 > width)
+            width = strlen (&entries[k][0]) + 2;
     }
 
     k = 0;
@@ -240,15 +239,15 @@ print_menu (int sty, int x, int alts, int width,
     printw ("\n");
     move (y++, x);
 
-    if ((width - n_chars (title)) % 2 != 0) /* If it's not possible to */
+    if ((width - strlen (title)) % 2 != 0) /* If it's not possible to */
     {                                       /* perfectly center the    */
-        blankspace2 = (width - n_chars (title) + 1) / 2;
+        blankspace2 = (width - strlen (title) + 1) / 2;
         blankspace1 = blankspace2 - 1;      /* menu title, it will be  */
     }                                       /* placed slightly left.   */
 
     else
     {
-        blankspace1 = (width - n_chars (title)) / 2;
+        blankspace1 = (width - strlen (title)) / 2;
         blankspace2 = blankspace1;
     }
 
@@ -278,7 +277,7 @@ print_menu (int sty, int x, int alts, int width,
     {                               /* except the last entry for the */
         addch (ACS_VLINE);          /* menu.                         */
         printw (" %s", &entries[k][0]);
-        blankspace1 = width - (n_chars (&entries[k][0]) + 1);
+        blankspace1 = width - (strlen (&entries[k][0]) + 1);
                                     /* The blankspace is after the */
         for (i = 0; i < blankspace1; i++)
             printw(" ");            /* string, since the strings   */
@@ -299,7 +298,7 @@ print_menu (int sty, int x, int alts, int width,
 
     addch (ACS_VLINE);
     printw (" %s", &entries[k][0]);
-    blankspace1 = width - (n_chars (&entries[k][0]) + 1);
+    blankspace1 = width - (strlen (&entries[k][0]) + 1);
 
     for (i = 0; i < blankspace1; i++)
         printw(" ");
@@ -319,23 +318,23 @@ print_menu (int sty, int x, int alts, int width,
     do  /* This loop is terminated when you */
     {   /* select an entry in the menu.     */
         attron (A_STANDOUT);    /* This highlights the current row. */
-        blankspace1 = width - (n_chars (&entries[currow - 1][0]) + 1);
+        blankspace1 = width - (strlen (&entries[currow - 1][0]) + 1);
         temparray[0] = ' ';     /* Also the blankspace after the */
         str_cp (&temparray[1], &entries[currow - 1][0]);
                                 /* string will be highlighted.   */
-        for (i = n_chars (&entries[currow - 1][0]) + 1; i < width; i++)
+        for (i = strlen (&entries[currow - 1][0]) + 1; i < width; i++)
         {
             temparray[i] = ' ';
         }
-        
+
         temparray[i] = '\0';    /* The highlighted entry will be  */
         mvprintw ((sty + 3) + (currow - 1) * 2, x + 1, "%s", temparray);
         attroff (A_STANDOUT);   /* printed over the corresponding */
         key = getch();          /* non-highlighted entry.         */
-        
+
 
         int **a;
-        
+
         mvprintw(20 ,4, "1. The R-pentomino");
         for(int i=5; i<=10; i++)
         {
@@ -369,8 +368,8 @@ print_menu (int sty, int x, int alts, int width,
                       x + 1, "%s", temparray);      /* non-highlighted */
                                                     /* entry over the  */
                                                     /* highlighted one */
-            
-            if (currow == 1)                        
+
+            if (currow == 1)
                 currow = alts;
 
             else                /* Change the currently selected entry */
@@ -388,7 +387,7 @@ print_menu (int sty, int x, int alts, int width,
             else
                 currow++;
         }
-        
+
     }
     while (key != '\n' && key != '\r' && key != 4);
     printf("%c", currow);
