@@ -1,2 +1,1 @@
-gcc -Wall main_fv.c -o main -lncurses -lm -pg
-
+gcc game_of_live_fv.c -o main -lncurses
