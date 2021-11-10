@@ -17,8 +17,8 @@ bool stop = true;
 bool next = false;
 bool main_menu = false;
 bool start_game = false;
-bool game_mode = true;
-bool previous_game_mode = false;
+bool game_mode = MANUAL;
+bool previous_game_mode = MANUAL;
 int init_structrue_choice = 0;
 // bool show_helpbox = true;
 bool play = false;
@@ -56,8 +56,6 @@ typedef enum game_state
 	INITIALIZE_GAME,
 	START_SIMULATION,
 	END_GAME
-
-
 }game_state_t;
 typedef enum game_structure{R_pentomino, Diehard, Acorn, user_defined}game_structure_t; // initialize game strucutre
 
@@ -97,6 +95,7 @@ void set_cell(cell_t *cell,int pos, game_structure_t init_struct, int x, int y);
 void display_cell(unsigned int x, unsigned int y, bool on);
 void display_all_cell(cell_t *cell_map, int cell_size, int shift_x, int shift_y);
 int compare(const void *a, const void *b);
+void updateState(cell_t** current_cell, int* num_alive_cell);
 
 // void report_choice(int mouse_x, int mouse_y, int *p_choice);
 
@@ -126,7 +125,7 @@ int main()
 	int width_game = maxx;
 	start_color();
 	init_pair(1, COLOR_RED,COLOR_BLACK);
-	init_pair(2, COLOR_WHITE,COLOR_GREEN);
+	init_pair(2, COLOR_WHITE,COLOR_RED);
 	cell_area.height = (maxy-starty_game);
 	cell_area.width = (maxx-startx_game);
 
@@ -143,7 +142,7 @@ int main()
 	wrefresh(game_win);
 	print_menu(game_win, 1, 3, main_menu_choices, startx_menu,starty_menu);
 
-	helpboxon();
+	// helpboxon();
 	// wmove(menu_win, 2, 2);
 	// wrefresh(menu_win);
 	// game window area
@@ -152,6 +151,7 @@ int main()
 	// Initialize game state
 	/* Get all the mouse events */
 	mousemask(ALL_MOUSE_EVENTS, NULL);
+	nodelay(stdscr,false);
 	game_state_t state = MAIN_MENU;
 		while(1)
 		{
@@ -319,6 +319,12 @@ int main()
 						state = START_SIMULATION;
 
 					}
+					// if(restart)
+					// {
+					// 	initialize_state(&cell_map,init_structrue_choice, &num_alive_cell);
+					// 	state = START_SIMULATION;
+					//
+					// }
 					// user defined option: TODO later
 
 					break;
@@ -335,8 +341,10 @@ int main()
 				{
 					if(restart)
 					{
-							state = INITIALIZE_GAME;
-							nodelay(game_win, FALSE);
+							clean_window(game_win);
+							// state = INITIALIZE_GAME;
+							initialize_state(&cell_map,init_structrue_choice, &num_alive_cell);
+							// nodelay(game_win, FALSE);
 							restart = false;
 
 
@@ -350,23 +358,25 @@ int main()
 								if(previous_game_mode == AUTOMATIC)
 								{
 									nodelay(game_win, FALSE);
+
+
 								}
 								if(ch == KEY_RIGHT)
 								{
 									// update manually
-									goto end;
+									updateState(&cell_map, &num_alive_cell);
 								}
-
 							}
 							else
 							// automatic simulation
 							{
-								// if(previous_game_mode == MANUAL)
-								// // activate no delay
-								// {
-								// 	nodelay(game_win, TRUE);
-								// }
-								//update
+								// helpboxoff();
+								if(previous_game_mode == MANUAL)
+								// activate no delay
+								{
+									nodelay(stdscr, TRUE);
+								}
+								updateState(&cell_map, &num_alive_cell);
 
 
 							}
@@ -377,6 +387,7 @@ int main()
 					break;
 				case END_GAME:
 				// free memcpy
+				free(cell_map);
 				goto end;
 
 					break;
@@ -476,6 +487,10 @@ void	obtain_choice_index(int *choice_ptr, char ch, MEVENT *event_ptr,  char** me
 
 void update_flag(char ch,int *hb)
 {
+	// mvwprintw(stdscr, 0,0, "game mode: %c: %d", ch, game_mode);
+	// mvwprintw(stdscr, 1,0, "play: %c: %d", ch, play);
+	// mvwprintw(stdscr, 2,0, "restart: %c: %d", ch, restart);
+
 	if(ch == 'h')
 	{
 		if(*hb == 1)
@@ -495,17 +510,23 @@ void update_flag(char ch,int *hb)
 	}
 	else if(ch == 'r')
 	{
-		restart = !restart;
+		restart = true;
 	}
 	else if(ch == 'q')
 	{
 		quit = !quit;
 	}
-	else if(ch = 's')
+	else if(ch == 's')
 	{
+		// helpboxoff();
 		previous_game_mode = game_mode;
 		game_mode = !game_mode;
+		// game_mode = MANUAL ? MANUAL : AUTOMATIC;
 	}
+
+	// mvwprintw(stdscr, 2,0, "game mode: %c: %d", ch, game_mode);
+	// mvwprintw(stdscr, 1,0, "play: %c: %d", ch, play);
+	// mvwprintw(stdscr, 2,0, "restart: %c: %d", ch, restart);
 }
 
 //cell map functions
@@ -655,10 +676,10 @@ void updateState(cell_t** current_cell, int* num_alive_cell)
       if(cell_count ==3 || ((cell_count==4) && cell_alive))
       {
         (*num_alive_cell)+=1;
-        // *current_cell = realloc(*current_cell, (*num_alive_cell)* sizeof(cell_t));
-        // (*current_cell)[(*num_alive_cell)-1].pos_x  = neighbour_sector[i-1].pos_x;
-        // (*current_cell)[(*num_alive_cell)-1].pos_y  = neighbour_sector[i-1].pos_y;
-        // (*current_cell)[(*num_alive_cell)-1].alive  = 1;
+        *current_cell = realloc(*current_cell, (*num_alive_cell)* sizeof(cell_t));
+        (*current_cell)[(*num_alive_cell)-1].pos_x  = neighbour_sector[i-1].pos_x;
+        (*current_cell)[(*num_alive_cell)-1].pos_y  = neighbour_sector[i-1].pos_y;
+        (*current_cell)[(*num_alive_cell)-1].alive  = 1;
         display_cell(neighbour_sector[i-1].pos_x,neighbour_sector[i-1].pos_y, ALIVE);
       }
       else
@@ -671,42 +692,43 @@ void updateState(cell_t** current_cell, int* num_alive_cell)
     }
   }
 	// loop again and  create the new cellmap
-	*current_cell = (cell_t *) calloc(*num_alive_cell,sizeof(cell_t)); // everything iniitalizes to zero
-	track_ind = (neighbour_sector[0].pos_x*cell_area.width+neighbour_sector[0].pos_y); // first index value
-	cell_count =1;
-	cell_alive = neighbour_sector[0].alive; // check whether the cell is alive
-	int current_cell_index = 0;
-	for(int i = 1; i < size_nc; i++)
-	{
-		int ind  = (neighbour_sector[i].pos_x*cell_area.width+neighbour_sector[i].pos_y);
-		if((track_ind == ind))
-		{
-			cell_count +=1;
-			cell_alive += neighbour_sector[i].alive;
-		}
-		else
-		{
-			if(cell_count ==3 || ((cell_count==4) && cell_alive))
-			{
-
-				(*current_cell)[(*num_alive_cell)-1].pos_x  = neighbour_sector[i-1].pos_x;
-				(*current_cell)[(*num_alive_cell)-1].pos_y  = neighbour_sector[i-1].pos_y;
-				(*current_cell)[(*num_alive_cell)-1].alive  = 1;
-				current_cell_index+=1;
-				if(current_cell_index == (*num_alive_cell-1))
-				{
-					break;
-				}
-			}
-
-			cell_count = 1;
-			track_ind = ind;
-			cell_alive = neighbour_sector[i].alive;
-		}
-	}
+	// *current_cell = (cell_t *) calloc(*num_alive_cell,sizeof(cell_t)); // everything iniitalizes to zero
+	// track_ind = (neighbour_sector[0].pos_x*cell_area.width+neighbour_sector[0].pos_y); // first index value
+	// cell_count =1;
+	// cell_alive = neighbour_sector[0].alive; // check whether the cell is alive
+	// int current_cell_index = 0;
+	// for(int i = 1; i < size_nc; i++)
+	// {
+	// 	int ind  = (neighbour_sector[i].pos_x*cell_area.width+neighbour_sector[i].pos_y);
+	// 	if((track_ind == ind))
+	// 	{
+	// 		cell_count +=1;
+	// 		cell_alive += neighbour_sector[i].alive;
+	// 	}
+	// 	else
+	// 	{
+	// 		if(cell_count ==3 || ((cell_count==4) && cell_alive))
+	// 		{
+	//
+	// 			(*current_cell)[(*num_alive_cell)-1].pos_x  = neighbour_sector[i-1].pos_x;
+	// 			(*current_cell)[(*num_alive_cell)-1].pos_y  = neighbour_sector[i-1].pos_y;
+	// 			(*current_cell)[(*num_alive_cell)-1].alive  = 1;
+	// 			current_cell_index+=1;
+	// 			if(current_cell_index == (*num_alive_cell-1))
+	// 			{
+	// 				break;
+	// 			}
+	// 		}
+	//
+	// 		cell_count = 1;
+	// 		track_ind = ind;
+	// 		cell_alive = neighbour_sector[i].alive;
+	// 	}
+	// }
 
 
   // free neighbour_sector memory
   free(neighbour_sector);
 
 }
+
