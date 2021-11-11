@@ -4,7 +4,7 @@
 
 #define WIDTH_MENU 30
 #define HEIGHT_MENU 10
-#define WIDTH_HELPBOX 12
+#define WIDTH_HELPBOX 30
 #define HEIGHT_HELPBOX 15
 #define NUM_STRUCTURES 3
 #define ALIVE 1
@@ -20,12 +20,13 @@ bool start_game = false;
 bool game_mode = MANUAL;
 bool previous_game_mode = MANUAL;
 int init_structrue_choice = 0;
+bool shutdown_grame = false;
 // bool show_helpbox = true;
 bool play = false;
 bool restart = false;
 bool quit = false;
 WINDOW *menu_win, *helpbox, *game_win;
-int helpboxon(void); // turn HelpBox on
+// int helpboxon(void); // turn HelpBox on
 int helpboxoff(void); // turn HelpBox off
 
 
@@ -41,8 +42,7 @@ char * setting_menu_choices[] = { "Initial structure",
 																	"return"};
 char * init_structe_menu_choices[] = { "R_pentomino",
 															"Diehard",
-															"Acorn",
-															"user_defined"};
+															"Acorn"};
 char * simulation_mode_menu_choices[] = { "manual",
 															"automatic"};
 
@@ -89,11 +89,12 @@ void report_choice(int mouse_x, int mouse_y, int *p_choice,int n_choices, char *
 void	obtain_choice_index(int *choice_ptr, char ch, MEVENT *event_ptr,  char** menu, int n_choices,int startx, int starty);
 void update_flag(char ch, int *hb);
 void clean_window(WINDOW* window);
+int helpboxon(bool play, bool mode);
 // game of life specific functions
 void initialize_state(cell_t ** cell,game_structure_t initial_structure, int * num_alive_cell);
 void set_cell(cell_t *cell,int pos, game_structure_t init_struct, int x, int y);
 void display_cell(unsigned int x, unsigned int y, bool on);
-void display_all_cell(cell_t *cell_map, int cell_size, int shift_x, int shift_y);
+void display_all_cell(cell_t *cell_map, int cell_size, int shift_x, int shift_y, float ratio_x, float ratio_y);
 int compare(const void *a, const void *b);
 void updateState(cell_t** current_cell, int* num_alive_cell);
 
@@ -101,9 +102,10 @@ void updateState(cell_t** current_cell, int* num_alive_cell);
 
 int main()
 {
-	cell_t *cell_map;
+	cell_t *cell_map = NULL;
 	int num_alive_cell = 0; // keep track of number of alive cell;
-	int display_shift_x=0, display_shift_y=0;
+	int display_shift_x=0.0, display_shift_y=0.0;
+	float ratio_x = 0.0, ratio_y = 0.0;
 
 	int c, choice = -1;
 	MEVENT event;
@@ -116,10 +118,10 @@ int main()
 	getmaxyx(stdscr, maxy, maxx);
 	startx_helpbox = 1;
 	starty_helpbox = 1;
-	startx_menu = ((maxx-38)/2);
+	startx_menu = ((maxx-42)/2);
 	starty_menu = (maxy-HEIGHT_MENU)/2;
-	startx_game =16;// (maxx-38)/2;
-	if(hb == 1 && startx_game < 16) startx_game = 16;
+	startx_game =20;// (maxx-38)/2;
+	if(hb == 1 && startx_game < 20) startx_game = 20;
 	starty_game = 0;
 	int height_game = maxy;
 	int width_game = maxx;
@@ -143,6 +145,8 @@ int main()
 	print_menu(game_win, 1, 3, main_menu_choices, startx_menu,starty_menu);
 
 	// helpboxon();
+	helpboxon(play, game_mode);
+
 	// wmove(menu_win, 2, 2);
 	// wrefresh(menu_win);
 	// game window area
@@ -153,7 +157,7 @@ int main()
 	mousemask(ALL_MOUSE_EVENTS, NULL);
 	nodelay(stdscr,false);
 	game_state_t state = MAIN_MENU;
-		while(1)
+		while(shutdown_grame == false)
 		{
 			// get user input
 			ch = getch();
@@ -161,7 +165,6 @@ int main()
 			// if the terminal size change, modify the screen
 			if(ch == KEY_RESIZE)
 			{
-
 				window_size_t previos_cell_area;
 				previos_cell_area.height = cell_area.height;
 				previos_cell_area.width = cell_area.width;
@@ -173,16 +176,16 @@ int main()
 				noecho();
 				startx_helpbox = 1;
 				starty_helpbox = 1;
-				startx_menu = ((maxx-38)/2);
+				startx_menu = ((maxx-42)/2);
 				starty_menu = (maxy-HEIGHT_MENU)/2;
-				startx_game =16;// (maxx-38)/2;
-				if(hb == 1 && startx_game < 16) startx_game = 16;
+				startx_game =20;// (maxx-38)/2;
+				if(hb == 1 && startx_game < 20) startx_game = 20;
 				starty_game = 0;
 				int height_game = maxy;
 				int width_game = maxx;
 				start_color();
 				init_pair(1, COLOR_RED,COLOR_BLACK);
-				init_pair(2, COLOR_WHITE,COLOR_GREEN);
+				init_pair(2, COLOR_WHITE,COLOR_RED);
 
 				keypad(stdscr, TRUE);
 				// menu_win = newwin(HEIGHT_MENU, WIDTH_MENU, starty_menu, startx_menu);
@@ -196,7 +199,10 @@ int main()
 				wbkgd(game_win, COLOR_PAIR(2));
 				werase(game_win);
 				refresh();
+				helpboxon(play, game_mode);
+
 				wrefresh(game_win);
+
 				if(state == MAIN_MENU || state ==SETTING_MENU || state == INIT_STRUCTURE_MENU || state == SIMULATION_MODE_MENU )
 				{
 					if(state == MAIN_MENU)
@@ -209,7 +215,7 @@ int main()
 					}
 					else if(state == INIT_STRUCTURE_MENU)
 					{
-								print_menu(game_win, choice,4, init_structe_menu_choices,startx_menu,starty_menu);
+								print_menu(game_win, choice,3, init_structe_menu_choices,startx_menu,starty_menu);
 
 					}
 					else if(state == SIMULATION_MODE_MENU)
@@ -222,17 +228,30 @@ int main()
 				{
 					// display_all_cell
 
-					if(num_alive_cell >0)
-					{
-						// helpboxoff();
-						display_shift_x = (cell_area.height-previos_cell_area.height)*2;
-						display_shift_y = (cell_area.width-previos_cell_area.width)*2;
+					// if(num_alive_cell >0)
+					// {
+					// 	display_shift_x = previos_cell_area.height;//(cell_area.height);///previos_cell_area.height);
+					// 	display_shift_y = previos_cell_area.width;//(cell_area.width);///previos_cell_area.width);
+					// 	ratio_x = -(cell_area.height-previos_cell_area.height);
+					// 	ratio_y = -(cell_area.width-previos_cell_area.width);
+					// 	// clean_window(game_win);
+					// 	mvwprintw(game_win, 2, 0, "ratio: %d",cell_area.height);//cell_map[i].pos_x );
+					// 	mvwprintw(game_win, 2, 15, "ratio: %d",cell_area.width);//cell_map[i].pos_y );
+					// 	mvwprintw(game_win, 4, 0, "h before: %d",previos_cell_area.height);//cell_map[i].pos_x );
+					// 	mvwprintw(game_win, 4, 15, "w before: %d",previos_cell_area.width);//cell_map[i].pos_y );
+					// 	display_all_cell(cell_map, num_alive_cell, display_shift_x, display_shift_y, ratio_x, ratio_y);
+					//
+					// }
+						mvwprintw(game_win, 0, 0, "don't modify during game :)\n press q to go to the main menu");//cell_map[i].pos_y );
+						wrefresh(game_win);
+						// sleep(3);
+						// state = MAIN_MENU;
 
-						display_all_cell(cell_map, num_alive_cell, display_shift_x, display_shift_y);
-					}
+
+
 				}
 
-				helpboxon();
+				// helpboxon();
 			}
 
 			switch (state) {
@@ -241,7 +260,6 @@ int main()
 					if(choice == 2)
 					{
 						//TODO: remove
-						goto end;
 						state = END_GAME;
 					}
 					else if(choice == 0)
@@ -274,20 +292,20 @@ int main()
 					{
 						state = INIT_STRUCTURE_MENU;
 						clean_window(game_win);
-						print_menu(menu_win, choice,4, init_structe_menu_choices,startx_menu, starty_menu);
+						print_menu(menu_win, choice,3, init_structe_menu_choices,startx_menu, starty_menu);
 						break;
 					}
 					else if(choice == 1)
 					{
 						state = SIMULATION_MODE_MENU;
 						clean_window(game_win);
-						print_menu(menu_win, choice,4, init_structe_menu_choices,startx_menu, starty_menu);
+						print_menu(menu_win, choice,2, simulation_mode_menu_choices,startx_menu, starty_menu);
 						break;
 					}
 					print_menu(game_win, choice,3, setting_menu_choices,startx_menu, starty_menu);
 					break;
 				case INIT_STRUCTURE_MENU:
-					obtain_choice_index(&choice, ch, &event, init_structe_menu_choices,4,startx_menu, starty_menu);
+					obtain_choice_index(&choice, ch, &event, init_structe_menu_choices,3,startx_menu, starty_menu);
 					if(choice >= 0 && choice <= 3)
 					{
 						init_structrue_choice = choice;
@@ -296,7 +314,7 @@ int main()
 						print_menu(game_win, choice,3, setting_menu_choices,startx_menu, starty_menu);
 						break;
 					}
-					print_menu(game_win, choice,4, init_structe_menu_choices,startx_menu, starty_menu);
+					print_menu(game_win, choice,3, init_structe_menu_choices,startx_menu, starty_menu);
 					break;
 				case SIMULATION_MODE_MENU:
 					obtain_choice_index(&choice, ch, &event, simulation_mode_menu_choices,2,startx_menu, starty_menu);
@@ -306,6 +324,7 @@ int main()
 						state = SETTING_MENU;
 						clean_window(game_win);
 						print_menu(game_win, choice,3, setting_menu_choices,startx_menu, starty_menu);
+						helpboxon(play, game_mode);
 						break;
 					}
 					print_menu(game_win, choice,2, simulation_mode_menu_choices,startx_menu, starty_menu);
@@ -386,9 +405,8 @@ int main()
 
 					break;
 				case END_GAME:
-				// free memcpy
-				free(cell_map);
-				goto end;
+
+					shutdown_grame = true;
 
 					break;
 			// 	// default:
@@ -397,9 +415,13 @@ int main()
 			//
 		}
 	end:
+
+		// free memcpy
 		endwin();
-
-
+		if(cell_map!=NULL)
+		{
+			free(cell_map);
+		}
 	return 0;
 }
 
@@ -440,7 +462,7 @@ void report_choice(int mouse_x, int mouse_y, int *p_choice,int n_choices, char *
 
 
 	// printw("%d:%d:%d\n",(mouse_y == j + choice),(mouse_x >= i),(mouse_x <= i + strlen(menu_choices[choice])));
-		if((mouse_y == j + choice) && (mouse_x >= i) && (mouse_x <= i + strlen(menu_choices[choice])))
+		if((mouse_y == j + choice) && (mouse_x >= i) && (mouse_x <= i + strlen(menu_choices[choice])+5))
 		{
 			// if(choice == n_choices - 1)
 			// 	*p_choice = -1;
@@ -452,14 +474,19 @@ void report_choice(int mouse_x, int mouse_y, int *p_choice,int n_choices, char *
 
 
 
-int helpboxon(void)
+int helpboxon(bool play, bool mode)
 	{
+		clean_window(helpbox);
 	wbkgd(helpbox, COLOR_PAIR(1));
-	wprintw(helpbox, "HelpBox\nq - quit\nr - restart\nH - HelpBox\n\nmovement:\n - arrows\n - hjkl\n\ndelete:\n - delete\n - backspace");
+	char * a = "activated";
+	char *  d = "deactivated";
+	char *m = "manual";
+	char * am = "automatic";
+	wprintw(helpbox, "HelpBox\nq - quit:\nr - restart:\np - play:%s \ns - change mode:%s", (play?a:d), (mode?m:am));
 	wrefresh(helpbox);
 
 	return 0;
-	}
+}
 
 int helpboxoff(void)
 	{
@@ -500,13 +527,17 @@ void update_flag(char ch,int *hb)
 		}
 		else
 		{
-			helpboxon();
+			// helpboxon();
+			helpboxon(play, game_mode);
+
 			*hb = 1;
 		}
 	}
 	if(ch == 'p')
 	{
 		play = !play;
+		helpboxon(play, game_mode);
+
 	}
 	else if(ch == 'r')
 	{
@@ -521,6 +552,8 @@ void update_flag(char ch,int *hb)
 		// helpboxoff();
 		previous_game_mode = game_mode;
 		game_mode = !game_mode;
+		helpboxon(play, game_mode);
+
 		// game_mode = MANUAL ? MANUAL : AUTOMATIC;
 	}
 
@@ -569,6 +602,10 @@ void initialize_state(cell_t **cell,game_structure_t init_struct, int* num_alive
       *num_alive_cell = 7;
       break;
 		case user_defined:
+		// while(ch!=q)
+		// {
+		//
+		// }
 			break;
 
     default:
@@ -588,19 +625,28 @@ void set_cell(cell_t *cell,int pos, game_structure_t init_struct, int x, int y){
 }
 
 void display_cell(unsigned int x, unsigned int y, bool on){
-	on ? mvwaddch(game_win,x, y,'X') : mvwaddch(game_win,x, y,' ');
+	on ? mvwaddch(game_win,x, y,'O') : mvwaddch(game_win,x, y,' ');
   wrefresh(game_win);
 }
 
 // TODO fix
-void display_all_cell(cell_t *cell_map, int cell_size, int shift_x, int shift_y)
+void display_all_cell(cell_t *cell_map, int cell_size, int shift_x, int shift_y, float ratio_x, float ratio_y)
 {
-	for(int i = 0; i <cell_size; i++)
+
+
+	int offset_x =  (int)(cell_map[0].pos_x * ratio_x/(float)shift_x);     // we find offset of one position and use that value to shift other position to prevent floating issue
+	int offset_y =  (int)(cell_map[0].pos_y * ratio_y/(float)shift_y);
+	for(int i = 0; i <1; i++)
 
 	{
-		cell_map[i].pos_x+=shift_x;
-		cell_map[i].pos_y+=shift_y;
-		display_cell(cell_map[i].pos_x, cell_map[i].pos_y, ALIVE);
+		cell_map[i].pos_x= cell_map[i].pos_x+offset_x;
+		cell_map[i].pos_y= cell_map[i].pos_y+offset_y;
+		mvwprintw(game_win, 0, 0, "%.2f",ratio_x);//cell_map[i].pos_x );
+		mvwprintw(game_win, 0, 5, "%.2f",ratio_y);//cell_map[i].pos_y );
+
+		wrefresh(game_win);
+
+		// display_cell(0, 0, ALIVE);
 	}
 
 }
@@ -664,71 +710,96 @@ void updateState(cell_t** current_cell, int* num_alive_cell)
   for(int i = 1; i < size_nc; i++)
   {
     int ind  = (neighbour_sector[i].pos_x*cell_area.width+neighbour_sector[i].pos_y);
+			// mvwprintw(game_win, i, 0, "%d",ind);//cell_map[i].pos_x );
+			// mvwprintw(game_win, i, 9, "%d",neighbour_sector[i].alive);//cell_map[i].pos_x );
+
+			wrefresh(game_win);
     if((track_ind == ind))
     {
       cell_count +=1;
       cell_alive += neighbour_sector[i].alive;
+			// mvwprintw(game_win, i, 11, "%d:%d",cell_count,cell_alive);//cell_map[i].pos_x );
+			// getch();
     }
     else
     {
       // apply game of life here
       // TODO: confirm whether it is better to reallocate or loop and allocate
       if(cell_count ==3 || ((cell_count==4) && cell_alive))
-      {
-        (*num_alive_cell)+=1;
-        *current_cell = realloc(*current_cell, (*num_alive_cell)* sizeof(cell_t));
-        (*current_cell)[(*num_alive_cell)-1].pos_x  = neighbour_sector[i-1].pos_x;
-        (*current_cell)[(*num_alive_cell)-1].pos_y  = neighbour_sector[i-1].pos_y;
-        (*current_cell)[(*num_alive_cell)-1].alive  = 1;
+			{
+				(*num_alive_cell)+=1;
+				// mvwprintw(game_win, i-1, 0, "ALIVE:%d", *num_alive_cell);//cell_map[i].pos_x );
+				// wrefresh(game_win);
+
+
+
+
+      // {
+			// 	mvwprintw(game_win, i, 15, "ALIVE");//cell_map[i].pos_x );
+			//
+      //   (*num_alive_cell)+=1;
+      //   *current_cell = realloc(*current_cell, (*num_alive_cell)* sizeof(cell_t));
+      //   (*current_cell)[(*num_alive_cell)-1].pos_x  = neighbour_sector[i-1].pos_x;
+      //   (*current_cell)[(*num_alive_cell)-1].pos_y  = neighbour_sector[i-1].pos_y;
+      //   (*current_cell)[(*num_alive_cell)-1].alive  = 1;
         display_cell(neighbour_sector[i-1].pos_x,neighbour_sector[i-1].pos_y, ALIVE);
       }
       else
       {
-        display_cell(neighbour_sector[i].pos_x,neighbour_sector[i].pos_y, DEAD);
+        display_cell(neighbour_sector[i-1].pos_x,neighbour_sector[i-1].pos_y, DEAD);
+				// mvwprintw(game_win, i-1, 15, "DEAD");//cell_map[i].pos_x );
+				// wrefresh(game_win);
+
       }
       cell_count = 1;
       track_ind = ind;
       cell_alive = neighbour_sector[i].alive;
+			// mvwprintw(game_win, i, 11, "%d:%d",cell_count,cell_alive);//cell_map[i].pos_x );
+			// wrefresh(game_win);
+
     }
   }
-	// loop again and  create the new cellmap
-	// *current_cell = (cell_t *) calloc(*num_alive_cell,sizeof(cell_t)); // everything iniitalizes to zero
-	// track_ind = (neighbour_sector[0].pos_x*cell_area.width+neighbour_sector[0].pos_y); // first index value
-	// cell_count =1;
-	// cell_alive = neighbour_sector[0].alive; // check whether the cell is alive
-	// int current_cell_index = 0;
-	// for(int i = 1; i < size_nc; i++)
-	// {
-	// 	int ind  = (neighbour_sector[i].pos_x*cell_area.width+neighbour_sector[i].pos_y);
-	// 	if((track_ind == ind))
-	// 	{
-	// 		cell_count +=1;
-	// 		cell_alive += neighbour_sector[i].alive;
-	// 	}
-	// 	else
-	// 	{
-	// 		if(cell_count ==3 || ((cell_count==4) && cell_alive))
-	// 		{
-	//
-	// 			(*current_cell)[(*num_alive_cell)-1].pos_x  = neighbour_sector[i-1].pos_x;
-	// 			(*current_cell)[(*num_alive_cell)-1].pos_y  = neighbour_sector[i-1].pos_y;
-	// 			(*current_cell)[(*num_alive_cell)-1].alive  = 1;
-	// 			current_cell_index+=1;
-	// 			if(current_cell_index == (*num_alive_cell-1))
-	// 			{
-	// 				break;
-	// 			}
-	// 		}
-	//
-	// 		cell_count = 1;
-	// 		track_ind = ind;
-	// 		cell_alive = neighbour_sector[i].alive;
-	// 	}
-	// }
+	// mvwprintw(game_win, size_nc, 11, "stop");//cell_map[i].pos_x );
+	// wrefresh(game_win);
+	// getch();
+
+
+	// loop again and  create the new cellmap and store the value inside
+	*current_cell = (cell_t *) calloc(*num_alive_cell,sizeof(cell_t)); // everything iniitalizes to zero
+	track_ind = (neighbour_sector[0].pos_x*cell_area.width+neighbour_sector[0].pos_y); // first index value
+	cell_count =1;
+	cell_alive = neighbour_sector[0].alive; // check whether the cell is alive
+	int current_cell_index = 0;
+	for(int i = 1; i < size_nc; i++)
+	{
+		int ind  = (neighbour_sector[i].pos_x*cell_area.width+neighbour_sector[i].pos_y);
+		if((track_ind == ind))
+		{
+			cell_count +=1;
+			cell_alive += neighbour_sector[i].alive;
+		}
+		else
+		{
+			if(cell_count ==3 || ((cell_count==4) && cell_alive))
+			{
+				current_cell_index+=1;
+				(*current_cell)[(current_cell_index)-1].pos_x  = neighbour_sector[i-1].pos_x;
+				(*current_cell)[(current_cell_index)-1].pos_y  = neighbour_sector[i-1].pos_y;
+				(*current_cell)[(current_cell_index)-1].alive  = 1;
+				if(current_cell_index == (*num_alive_cell))
+				{
+					break;
+				}
+			}
+
+			cell_count = 1;
+			track_ind = ind;
+			cell_alive = neighbour_sector[i].alive;
+		}
+	}
 
 
   // free neighbour_sector memory
   free(neighbour_sector);
 
 }
-
