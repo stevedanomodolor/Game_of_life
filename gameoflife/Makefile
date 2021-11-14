@@ -1,4 +1,4 @@
-CC = gcc
+CC = gcc -g
 CFLAGS = -Wall -I/usr/include/ -I.
 LDFLAGS = -lncurses
 DEPS = conway_functions.h visualization_tools.h global_variables.h common_variable_type.h

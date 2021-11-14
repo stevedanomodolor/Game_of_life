@@ -13,6 +13,11 @@
 bool cellmap_initialized_correctly(cell_t ** cellmap_ptr,simulation_structure_t *simulation_structure,  simulation_structure_names choice, window_property_t game_window, unsigned int* num_alive_cell,WINDOW* window, char *error_msg)
 {
   /****coder 3*****/
+  // check if cellmap is null, if not, free memory to later to filled.
+  if(cellmap_ptr!= NULL)  // to prevent memory leak, free and allocate memory 
+  {
+    free(*cellmap_ptr);
+  }
   switch (choice)
   {
     case R_pentomino:
@@ -234,6 +239,10 @@ bool cellmap_updated_successfully(cell_t** current_cell_ptr, unsigned int* num_a
     }
   }
 	/* loop again and  create the new cellmap and store the value inside */
+  if(current_cell_ptr!= NULL) // to prevent memory leak, free and allocate memory
+  {
+    free(*current_cell_ptr);
+  }
 	*current_cell_ptr = (cell_t *) calloc(*num_alive_cell,sizeof(cell_t)); // everything iniitalizes to zero
   /* make sure we can allocate memory*/
   if(current_cell_ptr== NULL)
