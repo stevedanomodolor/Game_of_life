@@ -10,7 +10,6 @@
 
 #include "conway_functions.h"
 
-
 bool cellmap_initialized_correctly(cell_t ** cellmap_ptr,simulation_structure_t *simulation_structure,  simulation_structure_names choice, window_property_t game_window, unsigned int* num_alive_cell,WINDOW* window, char *error_msg)
 {
   /****coder 3*****/
@@ -80,18 +79,14 @@ bool cellmap_initialized_correctly(cell_t ** cellmap_ptr,simulation_structure_t 
     set_cell(*cellmap_ptr,5,simulation_structure[choice],game_window,12,3,window);
     set_cell(*cellmap_ptr,6,simulation_structure[choice],game_window,12,4,window);
     set_cell(*cellmap_ptr,7,simulation_structure[choice],game_window,11,4,window);
-
-
     set_cell(*cellmap_ptr,8,simulation_structure[choice],game_window,2,6,window);
     set_cell(*cellmap_ptr,9,simulation_structure[choice],game_window,3,6,window);
     set_cell(*cellmap_ptr,10,simulation_structure[choice],game_window,4,6,window);
     set_cell(*cellmap_ptr,11,simulation_structure[choice],game_window,4,7,window);
-
     set_cell(*cellmap_ptr,12,simulation_structure[choice],game_window,2,12,window);
     set_cell(*cellmap_ptr,13,simulation_structure[choice],game_window,3,12,window);
     set_cell(*cellmap_ptr,14,simulation_structure[choice],game_window,4,12,window);
-    set_cell(*cellmap_ptr,15,simulation_structure[choice],game_window,4,11,window);
-    //
+    set_cell(*cellmap_ptr,15,simulation_structure[choice],game_window,4,11,window);    //
     set_cell(*cellmap_ptr,16,simulation_structure[choice],game_window,14,6,window);
     set_cell(*cellmap_ptr,17,simulation_structure[choice],game_window,15,6,window);
     set_cell(*cellmap_ptr,18,simulation_structure[choice],game_window,16,6,window);
@@ -100,9 +95,6 @@ bool cellmap_initialized_correctly(cell_t ** cellmap_ptr,simulation_structure_t 
     set_cell(*cellmap_ptr,21,simulation_structure[choice],game_window,15,12,window);
     set_cell(*cellmap_ptr,22,simulation_structure[choice],game_window,16,12,window);
     set_cell(*cellmap_ptr,23,simulation_structure[choice],game_window,14,11,window);
-
-
-
     set_cell(*cellmap_ptr,24,simulation_structure[choice],game_window,6,15,window);
     set_cell(*cellmap_ptr,25,simulation_structure[choice],game_window,6,16,window);
     set_cell(*cellmap_ptr,26,simulation_structure[choice],game_window,6,14,window);
@@ -111,7 +103,6 @@ bool cellmap_initialized_correctly(cell_t ** cellmap_ptr,simulation_structure_t 
     set_cell(*cellmap_ptr,29,simulation_structure[choice],game_window,12,16,window);
     set_cell(*cellmap_ptr,30,simulation_structure[choice],game_window,12,14,window);
     set_cell(*cellmap_ptr,31,simulation_structure[choice],game_window,11,14,window);
-
     set_cell(*cellmap_ptr,32,simulation_structure[choice],game_window,6,7,window);
     set_cell(*cellmap_ptr,33,simulation_structure[choice],game_window,6,8,window);
     set_cell(*cellmap_ptr,34,simulation_structure[choice],game_window,6,10,window);
@@ -124,8 +115,6 @@ bool cellmap_initialized_correctly(cell_t ** cellmap_ptr,simulation_structure_t 
     set_cell(*cellmap_ptr,41,simulation_structure[choice],game_window,8,7,window);
     set_cell(*cellmap_ptr,42,simulation_structure[choice],game_window,8,11,window);
     set_cell(*cellmap_ptr,43,simulation_structure[choice],game_window,8,12,window);
-
-
     set_cell(*cellmap_ptr,44,simulation_structure[choice],game_window,10,6,window);
     set_cell(*cellmap_ptr,45,simulation_structure[choice],game_window,10,7,window);
     set_cell(*cellmap_ptr,46,simulation_structure[choice],game_window,10,11,window);

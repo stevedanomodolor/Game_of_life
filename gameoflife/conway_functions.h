@@ -33,7 +33,10 @@ typedef struct cell
 /*simulation structure*/
 typedef struct simulation_structure_c
 {
-  int height;
+  /* store the property of the simulation structure
+  * to help center it in the game window
+  */
+  int height; 
   int width;
   int num_alive_cell;
 }simulation_structure_t;
