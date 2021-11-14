@@ -245,7 +245,7 @@ int main(int argc, char const *argv[])
         if(Quit)
         {
           my_state = MAIN_MENU_STATE;
-          nodelay(Game_Win, FALSE);
+          nodelay(stdscr, FALSE);
           Quit = false;
           clean_window(Game_Win);
           print_menu(Game_Win, 1, NUM_MENU_OPTIONS, Main_Menu_Choices, Menu_Win_Prop);
@@ -268,7 +268,7 @@ int main(int argc, char const *argv[])
                 /* activate getch blocking only when previously it was not activated(automatic mode)*/
                 if(Previous_Game_Mode == AUTOMATIC)
                 {
-                  nodelay(Game_Win, FALSE);
+                  nodelay(stdscr, FALSE);
                 }
                 if(user_input == KEY_RIGHT)
                 {
@@ -303,10 +303,10 @@ int main(int argc, char const *argv[])
   }
   end_screen();
   // free memory when necessary
-  if(cell_map!=NULL)
-  {
+  // if(cell_map!=NULL)
+  // {
   free(cell_map);
-  }
+  // }
   return 0;
 }
 void set_window_configuration(void)
