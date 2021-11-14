@@ -23,9 +23,9 @@ The ncurses library is used for the display, if you do not have it install, use 
 sudo apt-get install libncurses5-dev libncurses5
 ```
 ## Build
-To build the game go to the folder that include all the code then execute the following command
+To build the game go to the folder that where the Makefile is and execute the following command
 ```
-cd gameoflife - this should take you to the folder
+make clean
 make - to compile the code
 ./main - to execute the game
 ```
