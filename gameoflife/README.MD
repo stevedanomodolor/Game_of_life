@@ -34,7 +34,7 @@ make - to compile the code
 After executing the game, it should take you directly to the main menu-
 
  **IMPORTANT**
- - Use touch pad to interact with the menu, mouse click might not work well
+ - Use touch pad to interact with the menu, mouse click might not work well(external mouse does work but might require double click)
  - Remember to play p to start the simulation in both manual or automatic mode
  - Instructions in included in the Helpbox
  - **Have fun !!!:)))))))**
