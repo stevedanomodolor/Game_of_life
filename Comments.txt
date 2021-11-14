@@ -1,0 +1,17 @@
+/*
+  In order to implement the code, for the simulation of the structures proposed in the assignment,
+  the team-work strategy is that to divide the implemetation between: 
+  implementation of the most optimized method of resolution to check the live/dead cells (coder1),
+  display/visualization (coder2) and the creation of the menu options (coder3).
+  
+  For the options menu, the idea is that to provide the options to choose the structure to simulate,
+  before starting the simulation, the mode of simulation (automatic/manual), and quit the game.
+  !!! For the selection of the options, please use the touch-pad !!!
+
+  During the simulation is provide a legend (HelpBox) on the left side ofthe window, in which are specified 
+  the buttons to select the several options available: quit game (q), restart game (r), play/pause (p) 
+  (please press "p" to start the simulation) and the modality of running that can be automatic or manual 
+  (please press the right arrow on the keybord (->) to make a step forward in the simulation).
+
+  
+*/
