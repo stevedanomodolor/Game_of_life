@@ -1,0 +1,1349 @@
+desc: --time-unit=B
+cmd: ./main
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=195480
+mem_heap_B=182244
+mem_heap_extra_B=2212
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=363232
+mem_heap_B=258976
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=481296
+mem_heap_B=259144
+mem_heap_extra_B=6840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=631736
+mem_heap_B=262756
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=750264
+mem_heap_B=262156
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=923240
+mem_heap_B=264076
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1010352
+mem_heap_B=259372
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1200256
+mem_heap_B=259576
+mem_heap_extra_B=6840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1333280
+mem_heap_B=259552
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1510640
+mem_heap_B=272356
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1644824
+mem_heap_B=267340
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1822648
+mem_heap_B=267916
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1936288
+mem_heap_B=277828
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2073632
+mem_heap_B=259756
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2292976
+mem_heap_B=259792
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=2493760
+mem_heap_B=284668
+mem_heap_extra_B=6868
+mem_stacks_B=0
+heap_tree=detailed
+n12: 284668 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 14316 in 33 places, all below massif's threshold (1.00%)
+ n1: 12312 0x10C660: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 12312 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 12312 0x4926CEC: qsort_r (msort.c:222)
+  n1: 12312 0x10C803: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 12312 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=2651968
+mem_heap_B=286264
+mem_heap_extra_B=6856
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2821360
+mem_heap_B=286720
+mem_heap_extra_B=6880
+mem_stacks_B=0
+heap_tree=detailed
+n12: 286720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 14424 in 33 places, all below massif's threshold (1.00%)
+ n1: 13284 0x10C660: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 13284 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 13284 0x4926CEC: qsort_r (msort.c:222)
+  n1: 13284 0x10C803: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 13284 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=2911376
+mem_heap_B=260332
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3078448
+mem_heap_B=295840
+mem_heap_extra_B=6880
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3186720
+mem_heap_B=260344
+mem_heap_extra_B=6840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3331320
+mem_heap_B=275236
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3494920
+mem_heap_B=277036
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3664616
+mem_heap_B=274876
+mem_heap_extra_B=6860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=3821680
+mem_heap_B=273472
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3923624
+mem_heap_B=276436
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=4057768
+mem_heap_B=276316
+mem_heap_extra_B=6860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=4264080
+mem_heap_B=260752
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=4377696
+mem_heap_B=295384
+mem_heap_extra_B=6856
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=4548208
+mem_heap_B=276388
+mem_heap_extra_B=6828
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=4742552
+mem_heap_B=279556
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=4859608
+mem_heap_B=279556
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=4981736
+mem_heap_B=278116
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5200416
+mem_heap_B=260800
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=5435056
+mem_heap_B=260860
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=5555664
+mem_heap_B=298348
+mem_heap_extra_B=6868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=5732168
+mem_heap_B=280276
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=5863000
+mem_heap_B=282076
+mem_heap_extra_B=6860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=5994840
+mem_heap_B=282316
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=6159792
+mem_heap_B=309064
+mem_heap_extra_B=6856
+mem_stacks_B=0
+heap_tree=peak
+n12: 309064 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 23868 0x10C660: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 23868 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 23868 0x4926CEC: qsort_r (msort.c:222)
+  n1: 23868 0x10C803: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 23868 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n0: 15600 in 33 places, all below massif's threshold (1.00%)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=6313648
+mem_heap_B=261244
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=6451632
+mem_heap_B=301540
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=6586080
+mem_heap_B=261184
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=6725472
+mem_heap_B=305188
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=6918776
+mem_heap_B=281236
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=7049832
+mem_heap_B=280876
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=7175592
+mem_heap_B=281356
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=7305784
+mem_heap_B=281716
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=7494528
+mem_heap_B=301084
+mem_heap_extra_B=6868
+mem_stacks_B=0
+heap_tree=detailed
+n12: 301084 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 20088 0x10C660: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 20088 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 20088 0x4926CEC: qsort_r (msort.c:222)
+  n1: 20088 0x10C803: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 20088 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n0: 15180 in 33 places, all below massif's threshold (1.00%)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=7595160
+mem_heap_B=279436
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=7697600
+mem_heap_B=260884
+mem_heap_extra_B=6828
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=7804088
+mem_heap_B=283396
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=7895112
+mem_heap_B=280396
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=7997952
+mem_heap_B=300628
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=8095416
+mem_heap_B=278476
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=8191952
+mem_heap_B=260536
+mem_heap_extra_B=6840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=8281048
+mem_heap_B=278836
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=8369472
+mem_heap_B=290596
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=8471136
+mem_heap_B=260368
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=detailed
+n11: 260368 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 11952 in 34 places, all below massif's threshold (1.00%)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+ n1: 2688 0x488DAC2: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 2688 0x488CF28: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 2688 0x48A31DF: doupdate_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 2688 0x48994E7: wrefresh (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 2688 0x10CF9F: clean_window (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n1: 2688 0x10CEBD: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n1: 2688 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+        n0: 2688 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+#-----------
+snapshot=60
+#-----------
+time=8570304
+mem_heap_B=295156
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=8661304
+mem_heap_B=278116
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=8762920
+mem_heap_B=276916
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=8858760
+mem_heap_B=274636
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=8955576
+mem_heap_B=274636
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=9045752
+mem_heap_B=274876
+mem_heap_extra_B=6860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=9147048
+mem_heap_B=276556
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=9244936
+mem_heap_B=275716
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=9346840
+mem_heap_B=276316
+mem_heap_extra_B=6860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=9445080
+mem_heap_B=276076
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=detailed
+n11: 276076 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 15660 0x10C660: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 15660 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n0: 14688 in 34 places, all below massif's threshold (1.00%)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=9535072
+mem_heap_B=260428
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=9634464
+mem_heap_B=293104
+mem_heap_extra_B=6880
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=9730784
+mem_heap_B=260248
+mem_heap_extra_B=6840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=9830104
+mem_heap_B=273316
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=9924424
+mem_heap_B=272956
+mem_heap_extra_B=6860
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=10012224
+mem_heap_B=273472
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=10111488
+mem_heap_B=288316
+mem_heap_extra_B=6868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=10209624
+mem_heap_B=272716
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=10303056
+mem_heap_B=260176
+mem_heap_extra_B=6832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=10398328
+mem_heap_B=272836
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=detailed
+n11: 272836 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 14364 in 34 places, all below massif's threshold (1.00%)
+ n1: 12744 0x10C660: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 12744 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=80
+#-----------
+time=10486088
+mem_heap_B=272356
+mem_heap_extra_B=6852
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=10580192
+mem_heap_B=260008
+mem_heap_extra_B=6840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=10672616
+mem_heap_B=274036
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=10765200
+mem_heap_B=285580
+mem_heap_extra_B=6868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=10863408
+mem_heap_B=283300
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=10961136
+mem_heap_B=281932
+mem_heap_extra_B=6868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=11059824
+mem_heap_B=283756
+mem_heap_extra_B=6868
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=11157312
+mem_heap_B=281704
+mem_heap_extra_B=6856
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=11255040
+mem_heap_B=283528
+mem_heap_extra_B=6856
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=11343256
+mem_heap_B=274036
+mem_heap_extra_B=6836
+mem_stacks_B=0
+heap_tree=detailed
+n11: 274036 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 173620 0x48982AC: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 44660 0x489B798: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B7BD: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 44660 0x489B95B: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 44660 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 44660 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 44660 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 44660 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 44660 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n1: 37840 0x109EC2: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 37840 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 1800 in 1 place, below massif's threshold (1.00%)
+ n1: 26730 0x4A02A01: monstartup (gmon.c:153)
+  n1: 26730 0x109440: __gmon_start__ (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n1: 26730 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 26730 0x1FFEFFEA0F: ???
+     n1: 26730 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 26730 0x4011D05: call_init (dl-init.c:30)
+       n1: 26730 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 26730 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 14484 in 34 places, all below massif's threshold (1.00%)
+ n1: 13824 0x10C660: cellmap_updated_successfully (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 13824 0x109D1E: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11913 0x489B49F: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11913 0x48979EF: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11913 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11913 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 11913 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11913 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 11221 0x489EA39: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 11221 0x4898E04: vwprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n1: 11221 0x4898FA7: wprintw (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 11221 0x10CF35: helpbox_on (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+     n1: 11221 0x109F20: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+      n0: 11221 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 7168 0x48902C1: start_color_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 7168 0x109E49: set_window_configuration (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+   n0: 7168 0x109580: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n2: 4236 0x48BF2C7: _nc_doalloc (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C8540: _nc_read_termtype (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48C891C: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+    n1: 3792 0x48C8D13: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+     n1: 3792 0x48C8E44: _nc_read_entry2 (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+      n1: 3792 0x48C19F5: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+       n1: 3792 0x48C1E04: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+        n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+         n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+          n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+           n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+            n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+  n0: 444 in 4 places, all below massif's threshold (1.00%)
+ n1: 3792 0x48BD1AF: ??? (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n1: 3792 0x48C1E1B: _nc_setupterm (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+   n1: 3792 0x48979AC: newterm_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+    n1: 3792 0x4897E5C: newterm (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+     n1: 3792 0x48942CF: initscr (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+      n1: 3792 0x10CFB5: initialize_screen (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+       n0: 3792 0x10957B: main (in /home/stevedan/ERTS/GAME_OF_LIFE/gameoflife/main)
+ n1: 3760 0x48980B3: ??? (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+  n1: 3760 0x4898278: newwin_sp (in /usr/lib/x86_64-linux-gnu/libncurses.so.6.2)
+   n0: 3760 in 5 places, all below massif's threshold (1.00%)
+ n1: 3288 0x48BCAD5: _nc_add_to_try (in /usr/lib/x86_64-linux-gnu/libtinfo.so.6.2)
+  n0: 3288 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=90
+#-----------
+time=11435696
+mem_heap_B=260104
+mem_heap_extra_B=6840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=11526648
+mem_heap_B=272236
+mem_heap_extra_B=6844
+mem_stacks_B=0
+heap_tree=empty
